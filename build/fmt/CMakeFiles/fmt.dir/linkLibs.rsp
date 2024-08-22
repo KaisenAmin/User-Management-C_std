@@ -1,0 +1,1 @@
+  -L"C:/Users/asus/OneDrive/Desktop/project/user management with c_std/dependency/lib"  -L"C:/Users/asus/OneDrive/Desktop/project/user management with c_std/build/build"  ../encoding/libencoding.dll.a ../string/libstdstring.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
