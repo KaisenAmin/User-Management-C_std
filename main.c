@@ -3,8 +3,8 @@
 #include "database/postgres.h"
 #include "random/random.h"
 #include "json/json.h"
-#include "time/time.h"
-#include "string/string.h"
+#include "time/std_time.h"
+#include "string/std_string.h"
 #include <stdlib.h>
 
 

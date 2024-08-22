@@ -1,6 +1,6 @@
-# User Management with c_std
+# User Management with C_STD
 
-This project demonstrates a simple user management system implemented in C using the `c_std` framework. It handles user creation, storage in a PostgreSQL database, and serialization to JSON. The code is designed to be easily extendable and showcases some of the key features of the `c_std` framework.
+This project demonstrates a simple user management system implemented in C using the `C_STD` framework. It handles user creation, storage in a PostgreSQL database, and serialization to JSON. The code is designed to be easily extendable and showcases some of the key features of the `C_STD` framework.
 
 ## Features
 
@@ -8,7 +8,7 @@ This project demonstrates a simple user management system implemented in C using
 - **Database Integration**: Users are stored in a PostgreSQL database.
 - **Vector Container**: Users are maintained in a vector container for easy management.
 - **JSON Serialization**: Users can be serialized to JSON for storage or transmission.
-- **Time Management**: Registration time is captured and formatted using the `c_std` time module.
+- **Time Management**: Registration time is captured and formatted using the `C_STD` time module.
 
 ## Prerequisites
 
@@ -16,8 +16,9 @@ Ensure you have the following installed on your system:
 
 - C compiler (e.g., GCC)
 - PostgreSQL database server
-- `c_std` framework (ensure all required modules are included)
+- `C_STD` framework (ensure all required modules are included)
 - `libpq` (PostgreSQL C library)
+- CMake for project configuration and build
 
 ## Getting Started
 
@@ -44,22 +45,32 @@ Ensure you have the following installed on your system:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    https://github.com/KaisenAmin/User-Management-C_std.git
     ```
 
-2. **Configure the Project**: 
-    Ensure your `Makefile` is set up correctly to include the `c_std` framework and link against the `libpq` library.
-
-3. **Compile the Code**:
+2. **Clean Previous Builds** (optional):
+    Before starting a new build, it's a good practice to clean previous build files:
     ```bash
-    make
+    rm -rf CMakeCache.txt CMakeFiles
     ```
 
-4. **Run the Program**:
+3. **Configure the Project**: 
+    Use CMake to configure the project with GCC as the compiler:
     ```bash
-    ./user_management
+    cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
     ```
+
+4. **Compile the Code**:
+    ```bash
+    cmake --build .
+    ```
+
+5. **Run the Program**:
+    ```bash
+    make run
+    ```
+
+If everything is set up correctly, the program will run, connect to the PostgreSQL database, and perform the user management tasks.
 
 ## Usage
 
@@ -92,7 +103,9 @@ Json Serialized Data is
 
 - **src/**: Contains the source files.
 - **include/**: Contains header files.
+- **build/**: Directory for build output.
 - **Makefile**: Instructions for building the project.
+- **CMakeLists.txt**: Configuration file for CMake to manage the build process.
 
 ## Contributing
 
@@ -108,4 +121,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgements
 
-This project is built using the `c_std` framework, a custom C library aimed at simplifying and standardizing common tasks in C programming.
+This project is built using the `C_STD` framework, a custom C library aimed at simplifying and standardizing common tasks in C programming.
