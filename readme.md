@@ -45,27 +45,34 @@ Ensure you have the following installed on your system:
 
 1. **Clone the Repository**:
     ```bash
-    https://github.com/KaisenAmin/User-Management-C_std.git
+    git clone https://github.com/KaisenAmin/User-Management-C_std.git
+    cd User-Management-C_std
     ```
 
-2. **Clean Previous Builds** (optional):
+2. **Create and Navigate to the Build Directory**:
+    ```bash
+    mkdir build
+    cd build
+    ```
+
+3. **Clean Previous Builds** (optional):
     Before starting a new build, it's a good practice to clean previous build files:
     ```bash
     rm -rf CMakeCache.txt CMakeFiles
     ```
 
-3. **Configure the Project**: 
+4. **Configure the Project**: 
     Use CMake to configure the project with GCC as the compiler:
     ```bash
     cmake -G "Unix Makefiles" -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ ..
     ```
 
-4. **Compile the Code**:
+5. **Compile the Code**:
     ```bash
     cmake --build .
     ```
 
-5. **Run the Program**:
+6. **Run the Program**:
     ```bash
     make run
     ```
@@ -98,22 +105,6 @@ Json Serialized Data is
     }
 ]
 ```
-
-## Project Structure
-
-- **src/**: Contains the source files.
-- **include/**: Contains header files.
-- **build/**: Directory for build output.
-- **Makefile**: Instructions for building the project.
-- **CMakeLists.txt**: Configuration file for CMake to manage the build process.
-
-## Contributing
-
-1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Create a new Pull Request.
 
 ## License
 
