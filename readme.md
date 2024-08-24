@@ -10,6 +10,16 @@ This project demonstrates a simple user management system implemented in C using
 - **JSON Serialization**: Users can be serialized to JSON for storage or transmission.
 - **Time Management**: Registration time is captured and formatted using the `C_STD` time module.
 
+## Requirements
+
+- GCC compiler (ensure it's added to your system's PATH).
+- CMake for building the project.
+- OpenSSL (for SSL/TLS functionality, if needed).
+- **Linux Users**: Ensure you have development libraries installed:
+  ```bash
+  sudo apt-get install libssl-dev
+  ```
+  
 ## Prerequisites
 
 Ensure you have the following installed on your system:
